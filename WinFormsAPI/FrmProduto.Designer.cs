@@ -42,6 +42,7 @@
             label5 = new Label();
             label6 = new Label();
             lblMensagem = new Label();
+            btnexcluir = new Button();
             SuspendLayout();
             // 
             // TxtId
@@ -97,6 +98,8 @@
             btnSalvar.TabIndex = 6;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Visible = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // label1
             // 
@@ -160,11 +163,24 @@
             lblMensagem.Size = new Size(360, 23);
             lblMensagem.TabIndex = 13;
             // 
+            // btnexcluir
+            // 
+            btnexcluir.BackColor = SystemColors.Control;
+            btnexcluir.Location = new Point(173, 267);
+            btnexcluir.Name = "btnexcluir";
+            btnexcluir.Size = new Size(75, 24);
+            btnexcluir.TabIndex = 14;
+            btnexcluir.Text = "Excluir";
+            btnexcluir.UseVisualStyleBackColor = false;
+            btnexcluir.Visible = false;
+            btnexcluir.Click += btnexcluir_Click;
+            // 
             // FrmProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(365, 318);
+            Controls.Add(btnexcluir);
             Controls.Add(lblMensagem);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -202,5 +218,6 @@
         private Label label5;
         private Label label6;
         private Label lblMensagem;
+        private Button btnexcluir;
     }
 }

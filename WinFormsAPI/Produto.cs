@@ -16,8 +16,8 @@ namespace WinFormsAPI
         public string descricao { get; set; }
         public string un { get; set; }
         public int idCategoria { get; set; }
-        public float precoCusto { get; set; }
-        public float precoVenda { get; set; }
+        public Decimal precoCusto { get; set; }
+        public Decimal precoVenda { get; set; }
         public int estoqueMinimo { get; set; }
         public int estoqueMaximo { get; set; }
         public int estoqueSaldoInicial { get; set; }
@@ -53,6 +53,49 @@ namespace WinFormsAPI
                 return JsonConvert.DeserializeObject<Produto>(response.Content);
             else
                 return null;
+
+        }
+
+        public async Task<bool> AtualizarProdutoAsync(int id, Produto produto)
+        {
+            var client = new RestClient();
+            var request = new RestRequest("https://localhost:7024/api/Produtos/" + id,
+                Method.Put);
+            request.RequestFormat = DataFormat.Json;
+            request.AddJsonBody(produto);
+            RestResponse response = await client.ExecuteAsync(request);
+            if (response.IsSuccessStatusCode)
+                return true;
+            else
+                return false;
+
+        }
+
+        public async Task<bool> AdicionarProdutoAsync(Produto produto)
+        {
+            var client = new RestClient();
+            var request = new RestRequest("https://localhost:7024/api/Produtos/" + id,
+                Method.Post);
+            request.RequestFormat = DataFormat.Json;
+            request.AddJsonBody(produto);
+            RestResponse response = await client.ExecuteAsync(request);
+            if (response.IsSuccessStatusCode)
+                return true;
+            else
+                return false;
+
+        }
+        public async Task<bool>EcluirProdutoAsync(int id)
+        {
+            var client = new RestClient();
+            var request = new RestRequest("https://localhost:7024/api/Produtos/" + id,
+                Method.Delete);
+           
+            RestResponse response = await client.ExecuteAsync(request);
+            if (response.IsSuccessStatusCode)
+                return true;
+            else
+                return false;
 
         }
 

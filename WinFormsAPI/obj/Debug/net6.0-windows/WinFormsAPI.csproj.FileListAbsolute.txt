@@ -21,3 +21,4 @@ C:\Users\Rodrigo\source\repos\aprendendo API\WinFormsAPI\obj\Debug\net6.0-window
 C:\Users\Rodrigo\source\repos\aprendendo API\WinFormsAPI\obj\Debug\net6.0-windows\WinFormsAPI.pdb
 C:\Users\Rodrigo\source\repos\aprendendo API\WinFormsAPI\obj\Debug\net6.0-windows\WinFormsAPI.genruntimeconfig.cache
 C:\Users\Rodrigo\source\repos\aprendendo API\WinFormsAPI\obj\Debug\net6.0-windows\ref\WinFormsAPI.dll
+C:\Users\Rodrigo\source\repos\aprendendo API\WinFormsAPI\obj\Debug\net6.0-windows\WinFormsAPI.FrmProduto.resources
